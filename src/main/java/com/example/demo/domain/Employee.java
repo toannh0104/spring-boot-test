@@ -1,41 +1,49 @@
 package com.example.demo.domain;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
+@Entity
 public class Employee {
+
+    @Id
+    @GeneratedValue(strategy= GenerationType.IDENTITY)
+    private Long id;
+    private String firstName;
+    private String lastName;
 
     public Employee() {
 
     }
-    public Employee(int id, String firstName, String lastName) {
+    public Employee(Long id, String firstName, String lastName) {
         this.id = id;
-        this.firstname = firstName;
-        this.lastname = lastName;
+        this.firstName = firstName;
+        this.lastName = lastName;
     }
 
-    private int id;
-    private String firstname;
-    private String lastname;
-
-    public int getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
-    public String getFirstname() {
-        return firstname;
+    public String getFirstName() {
+        return firstName;
     }
 
-    public void setFirstname(String firstname) {
-        this.firstname = firstname;
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
     }
 
-    public String getLastname() {
-        return lastname;
+    public String getLastName() {
+        return lastName;
     }
 
-    public void setLastname(String lastname) {
-        this.lastname = lastname;
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
     }
 }

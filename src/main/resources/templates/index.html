@@ -2,8 +2,8 @@
 <tbody>
 <tr  th:each="employee : ${listemployee}">
     <td th:text="${employee.id}">Employee ID</td>
-    <td th:text="${employee.firstname}">FirstName</td>
-    <td th:text="${employee.lastname}">LastName</td>
+    <td th:text="${employee.firstName}">FirstName</td>
+    <td th:text="${employee.lastName}">LastName</td>
 
     <td>
         <a th:href="@{'/edit/' + ${employee.id}}">Edit</a>
